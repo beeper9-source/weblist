@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 GitHub 리포지토리</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .repos-container {
+            padding: 20px;
+        }
+
+        .repo-item {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .repo-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .repo-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .repo-name::before {
+            content: "📁";
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        .repo-description {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .repo-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .language-tag {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .stars-count {
+            background: #fff3e0;
+            color: #f57c00;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .repo-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-align: center;
+            flex: 1;
+        }
+
+        .repo-link:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .homepage-link {
+            display: inline-block;
+            background: #4caf50;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-align: center;
+            flex: 1;
+        }
+
+        .homepage-link:hover {
+            background: #45a049;
+            transform: translateY(-1px);
+        }
+
+        .stats {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 12px;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .repo-item {
+                padding: 15px;
+            }
+            
+            .repo-name {
+                font-size: 18px;
+            }
+            
+            .button-container {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .repo-link, .homepage-link {
+                font-size: 13px;
+                padding: 10px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 나의 GitHub 리포지토리</h1>
+            <p>beeper9-source의 프로젝트들</p>
+        </div>
+        
+        <div class="repos-container">
+            <div class="stats">
+                총 8개의 리포지토리
+            </div>
+            
+            <div class="repo-item">
+                <div class="repo-name">ai_studio</div>
+                <div class="repo-description">ai_studio</div>
+                <div class="repo-meta">
+                    <span class="language-tag">HTML</span>
+                    <span class="stars-count">⭐ 0</span>
+                </div>
+                <div class="button-container">
+                    <a href="https://github.com/beeper9-source/ai_studio" class="repo-link" target="_blank">
+                        GitHub에서 보기
+                    </a>
+                    <a href="https://beeper9-source.github.io/ai_studio/" class="homepage-link" target="_blank">
+                        🌐 홈페이지 보기
+                    </a>
+                </div>
+            </div>
+
+            <div class="repo-item">
+                <div class="repo-name">AQUA</div>
+                <div class="repo-description">아쿠아 경기기록</div>
+                <div class="repo-meta">
+                    <span class="language-tag">TypeScript</span>
+                    <span class="stars-count">⭐ 0</span>
+                </div>
+                <div class="button-container">
+                    <a href="https://github.com/beeper9-source/AQUA" class="repo-link" target="_blank">
+                        GitHub에서 보기
+                    </a>
+                    <a href="https://beeper9-source.github.io/AQUA/" class="homepage-link" target="_blank">
+                        🌐 홈페이지 보기
+                    </a>
+                </div>
+            </div>
+
+            <div class="repo-item">
+                <div class="repo-name">Daily-Routine</div>
+                <div class="repo-description">Daily Routine</div>
+                <div class="repo-meta">
+                    <span class="language-tag">JavaScript</span>
+                    <span class="stars-count">⭐ 0</span>
+                </div>
+                <div class="button-container">
+                    <a href="https://github.com/beeper9-source/Daily-Routine" class="repo-link" target="_blank">
+                        GitHub에서 보기
+                    </a>
+                    <a href="https://beeper9-source.github.io/Daily-Routine/" class="homepage-link" target="_blank">
+                        🌐 홈페이지 보기
+                    </a>
+                </div>
+            </div>
+
+            <div class="repo-item">
+                <div class="repo-name">sn01</div>
+                <div class="repo-description">수내체임버앙상블 출석부</div>
+                <div class="repo-meta">
+                    <span class="language-tag">JavaScript</span>
+                    <span class="stars-count">⭐ 0</span>
+                </div>
+                <div class="button-container">
+                    <a href="https://github.com/beeper9-source/sn01" class="repo-link" target="_blank">
+                        GitHub에서 보기
+                    </a>
+                    <a href="https://beeper9-source.github.io/sn01/" class="homepage-link" target="_blank">
+                        🌐 홈페이지 보기
+                    </a>
+                </div>
+            </div>
+
+            <div class="repo-item">
+                <div class="repo-name">starbuks</div>
+                <div class="repo-description">아쿠아 경기기록 ver 2</div>
+                <div class="repo-meta">
+                    <span class="language-tag">빈 리포지토리</span>
+                    <span class="stars-count">⭐ 0</span>
+                </div>
+                <div class="button-container">
+                    <a href="https://github.com/beeper9-source/starbuks" class="repo-link" target="_blank">
+                        GitHub에서 보기
+                    </a>
+                    <a href="https://beeper9-source.github.io/starbuks/" class="homepage-link" target="_blank">
+                        🌐 홈페이지 보기
+                    </a>
+                </div>
+            </div>
+
+            <div class="repo-item">
+                <div class="repo-name">zerozero2</div>
+                <div class="repo-description">SDS피클볼동호회</div>
+                <div class="repo-meta">
+                    <span class="language-tag">JavaScript</span>
+                    <span class="stars-count">⭐ 0</span>
+                </div>
+                <div class="button-container">
+                    <a href="https://github.com/beeper9-source/zerozero2" class="repo-link" target="_blank">
+                        GitHub에서 보기
+                    </a>
+                    <a href="https://beeper9-source.github.io/zerozero2/" class="homepage-link" target="_blank">
+                        🌐 홈페이지 보기
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>📱 모바일 최적화된 GitHub 리포지토리 목록</p>
+            <p>마지막 업데이트: 2025년 1월</p>
+        </div>
+    </div>
+</body>
+</html>
