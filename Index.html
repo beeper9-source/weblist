@@ -48,15 +48,15 @@
         }
 
         .repos-container {
-            padding: 20px;
+            padding: 15px;
         }
 
         .repo-item {
             background: white;
-            border-radius: 15px;
-            margin-bottom: 15px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            margin-bottom: 8px;
+            padding: 12px 16px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
             transition: all 0.3s ease;
             border: 1px solid #f0f0f0;
         }
@@ -67,12 +67,13 @@
         }
 
         .repo-name {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 600;
             color: #2c3e50;
             margin-bottom: 8px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
         }
 
         .repo-name::before {
@@ -83,40 +84,24 @@
 
         .repo-description {
             color: #7f8c8d;
-            font-size: 14px;
-            margin-bottom: 12px;
-            line-height: 1.4;
+            font-size: 13px;
+            font-weight: 400;
+            margin-left: auto;
         }
 
-        .repo-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 15px;
+        .repo-date {
+            color: #95a5a6;
+            font-size: 11px;
+            font-weight: 400;
+            margin-top: 4px;
+            text-align: right;
         }
 
-        .language-tag {
-            background: #e3f2fd;
-            color: #1976d2;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
-        }
-
-        .stars-count {
-            background: #fff3e0;
-            color: #f57c00;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
-        }
 
         .button-container {
             display: flex;
-            gap: 10px;
-            margin-top: 15px;
+            gap: 8px;
+            margin-top: 8px;
         }
 
         .repo-link {
@@ -124,10 +109,10 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 25px;
+            padding: 10px 16px;
+            border-radius: 20px;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 13px;
             transition: all 0.3s ease;
             text-align: center;
             flex: 1;
@@ -143,10 +128,10 @@
             background: #4caf50;
             color: white;
             text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 25px;
+            padding: 10px 16px;
+            border-radius: 20px;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 13px;
             transition: all 0.3s ease;
             text-align: center;
             flex: 1;
@@ -181,7 +166,7 @@
             }
             
             .repo-item {
-                padding: 15px;
+                padding: 10px 12px;
             }
             
             .repo-name {
@@ -190,12 +175,12 @@
             
             .button-container {
                 flex-direction: column;
-                gap: 8px;
+                gap: 6px;
             }
             
             .repo-link, .homepage-link {
-                font-size: 13px;
-                padding: 10px 16px;
+                font-size: 12px;
+                padding: 8px 14px;
             }
         }
     </style>
@@ -213,12 +198,11 @@
             </div>
             
             <div class="repo-item">
-                <div class="repo-name">1. ai_studio</div>
-                <div class="repo-description">ai_studio</div>
-                <div class="repo-meta">
-                    <span class="language-tag">HTML</span>
-                    <span class="stars-count">⭐ 0</span>
+                <div class="repo-name">
+                    <span>1. ai_studio</span>
+                    <span class="repo-description">ai_studio</span>
                 </div>
+                <div class="repo-date">마지막 수정: 2025-09-29</div>
                 <div class="button-container">
                     <a href="https://github.com/beeper9-source/ai_studio" class="repo-link" target="_blank">
                         GitHub에서 보기
@@ -230,12 +214,11 @@
             </div>
 
             <div class="repo-item">
-                <div class="repo-name">2. AQUA</div>
-                <div class="repo-description">아쿠아 경기기록</div>
-                <div class="repo-meta">
-                    <span class="language-tag">TypeScript</span>
-                    <span class="stars-count">⭐ 0</span>
+                <div class="repo-name">
+                    <span>2. AQUA</span>
+                    <span class="repo-description">아쿠아 경기기록</span>
                 </div>
+                <div class="repo-date">마지막 수정: 2025-09-25</div>
                 <div class="button-container">
                     <a href="https://github.com/beeper9-source/AQUA" class="repo-link" target="_blank">
                         GitHub에서 보기
@@ -247,12 +230,11 @@
             </div>
 
             <div class="repo-item">
-                <div class="repo-name">3. Daily-Routine</div>
-                <div class="repo-description">Daily Routine</div>
-                <div class="repo-meta">
-                    <span class="language-tag">JavaScript</span>
-                    <span class="stars-count">⭐ 0</span>
+                <div class="repo-name">
+                    <span>3. Daily-Routine</span>
+                    <span class="repo-description">Daily Routine</span>
                 </div>
+                <div class="repo-date">마지막 수정: 2025-10-01</div>
                 <div class="button-container">
                     <a href="https://github.com/beeper9-source/Daily-Routine" class="repo-link" target="_blank">
                         GitHub에서 보기
@@ -264,12 +246,11 @@
             </div>
 
             <div class="repo-item">
-                <div class="repo-name">4. sn01</div>
-                <div class="repo-description">수내체임버앙상블 출석부</div>
-                <div class="repo-meta">
-                    <span class="language-tag">JavaScript</span>
-                    <span class="stars-count">⭐ 0</span>
+                <div class="repo-name">
+                    <span>4. sn01</span>
+                    <span class="repo-description">수내체임버앙상블 출석부</span>
                 </div>
+                <div class="repo-date">마지막 수정: 2025-09-28</div>
                 <div class="button-container">
                     <a href="https://github.com/beeper9-source/sn01" class="repo-link" target="_blank">
                         GitHub에서 보기
@@ -281,12 +262,11 @@
             </div>
 
             <div class="repo-item">
-                <div class="repo-name">5. grace</div>
-                <div class="repo-description">Grace Practice 2025 - 연주곡목록 및 연습곡 관리</div>
-                <div class="repo-meta">
-                    <span class="language-tag">JavaScript</span>
-                    <span class="stars-count">⭐ 0</span>
+                <div class="repo-name">
+                    <span>5. grace</span>
+                    <span class="repo-description">Grace Practice 2025 - 연주곡목록 및 연습곡 관리</span>
                 </div>
+                <div class="repo-date">마지막 수정: 2025-01-15</div>
                 <div class="button-container">
                     <a href="https://github.com/beeper9-source/grace" class="repo-link" target="_blank">
                         GitHub에서 보기
@@ -298,12 +278,11 @@
             </div>
 
             <div class="repo-item">
-                <div class="repo-name">6. weblist</div>
-                <div class="repo-description">웹 리스트 프로젝트</div>
-                <div class="repo-meta">
-                    <span class="language-tag">HTML</span>
-                    <span class="stars-count">⭐ 0</span>
+                <div class="repo-name">
+                    <span>6. weblist</span>
+                    <span class="repo-description">웹 리스트 프로젝트</span>
                 </div>
+                <div class="repo-date">마지막 수정: 2025-01-15</div>
                 <div class="button-container">
                     <a href="https://github.com/beeper9-source/weblist" class="repo-link" target="_blank">
                         GitHub에서 보기
@@ -315,12 +294,11 @@
             </div>
 
             <div class="repo-item">
-                <div class="repo-name">7. portfolio</div>
-                <div class="repo-description">개인 포트폴리오 사이트</div>
-                <div class="repo-meta">
-                    <span class="language-tag">JavaScript</span>
-                    <span class="stars-count">⭐ 0</span>
+                <div class="repo-name">
+                    <span>7. portfolio</span>
+                    <span class="repo-description">개인 포트폴리오 사이트</span>
                 </div>
+                <div class="repo-date">마지막 수정: 2025-01-10</div>
                 <div class="button-container">
                     <a href="https://github.com/beeper9-source/portfolio" class="repo-link" target="_blank">
                         GitHub에서 보기
@@ -332,12 +310,11 @@
             </div>
 
             <div class="repo-item">
-                <div class="repo-name">8. my-first-github</div>
-                <div class="repo-description">금슬농장 - 신선한 계란의 품질</div>
-                <div class="repo-meta">
-                    <span class="language-tag">HTML</span>
-                    <span class="stars-count">⭐ 0</span>
+                <div class="repo-name">
+                    <span>8. my-first-github</span>
+                    <span class="repo-description">금슬농장 - 신선한 계란의 품질</span>
                 </div>
+                <div class="repo-date">마지막 수정: 2025-01-08</div>
                 <div class="button-container">
                     <a href="https://github.com/beeper9-source/my-first-github" class="repo-link" target="_blank">
                         GitHub에서 보기
@@ -349,12 +326,11 @@
             </div>
 
             <div class="repo-item">
-                <div class="repo-name">9. zerozero2</div>
-                <div class="repo-description">SDS피클볼동호회</div>
-                <div class="repo-meta">
-                    <span class="language-tag">JavaScript</span>
-                    <span class="stars-count">⭐ 0</span>
+                <div class="repo-name">
+                    <span>9. zerozero2</span>
+                    <span class="repo-description">SDS피클볼동호회</span>
                 </div>
+                <div class="repo-date">마지막 수정: 2025-10-01</div>
                 <div class="button-container">
                     <a href="https://github.com/beeper9-source/zerozero2" class="repo-link" target="_blank">
                         GitHub에서 보기
